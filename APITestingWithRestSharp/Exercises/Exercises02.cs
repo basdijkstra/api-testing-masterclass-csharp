@@ -4,7 +4,7 @@ using RestSharp;
 using System.Linq;
 using System.Net;
 
-namespace APITestingWithRestSharp.Answers
+namespace APITestingWithRestSharp.Exercises
 {
     [TestFixture]
     public class Exercises02
