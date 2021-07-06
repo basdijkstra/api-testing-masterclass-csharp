@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
-using RestSharp;
-using System.Net;
+using System;
 using WireMock.RequestBuilders;
 using WireMock.ResponseBuilders;
 using WireMock.Server;
@@ -61,7 +60,7 @@ namespace APIMockingWithWireMock.Examples
             .RespondWith(
                 Response.Create()
                 .WithStatusCode(200)
-                .WithDelay(3000)
+                .WithDelay(TimeSpan.FromMilliseconds(2000))
             );
         }
 
