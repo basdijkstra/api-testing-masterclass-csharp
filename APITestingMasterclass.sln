@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APITestingWithRestSharp", "APITestingWithRestSharp\APITestingWithRestSharp.csproj", "{FD55847B-2372-4FB7-B979-9AA04CD44922}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APITestingWithRestSharp", "APITestingWithRestSharp\APITestingWithRestSharp.csproj", "{FD55847B-2372-4FB7-B979-9AA04CD44922}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIMockingWithWireMock", "APIMockingWithWireMock\APIMockingWithWireMock.csproj", "{B264960C-2EB8-427D-904E-40884F846F4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{FD55847B-2372-4FB7-B979-9AA04CD44922}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD55847B-2372-4FB7-B979-9AA04CD44922}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD55847B-2372-4FB7-B979-9AA04CD44922}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B264960C-2EB8-427D-904E-40884F846F4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B264960C-2EB8-427D-904E-40884F846F4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B264960C-2EB8-427D-904E-40884F846F4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B264960C-2EB8-427D-904E-40884F846F4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
