@@ -1,0 +1,83 @@
+{
+  "consumer": {
+    "name": "Zip API Consumer"
+  },
+  "provider": {
+    "name": "Zip API Provider"
+  },
+  "interactions": [
+    {
+      "description": "a request to retrieve location data for us zip code 90210",
+      "providerState": "there is location data for us zip code 90210",
+      "request": {
+        "method": "get",
+        "path": "/zip/us/90210",
+        "headers": {
+          "Accept": "application/json"
+        },
+        "matchingRules": {
+          "$.path": {
+            "match": "regex",
+            "regex": "^\\/zip\\/[a-zA-Z]{2}\\/[0-9]{5}$"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": {
+          "placeName": "Beverly Hills",
+          "state": "California",
+          "country": "United States",
+          "countryAbbreviation": "US",
+          "active": true
+        },
+        "matchingRules": {
+          "$.body.placeName": {
+            "match": "type"
+          },
+          "$.body.state": {
+            "match": "type"
+          },
+          "$.body.country": {
+            "match": "type"
+          },
+          "$.body.countryAbbreviation": {
+            "match": "type"
+          },
+          "$.body.active": {
+            "match": "type"
+          }
+        }
+      }
+    },
+    {
+      "description": "a request to retrieve location data for us zip code 99999",
+      "providerState": "there is no location data for us zip code 99999",
+      "request": {
+        "method": "get",
+        "path": "/zip/us/99999",
+        "headers": {
+          "Accept": "application/json"
+        },
+        "matchingRules": {
+          "$.path": {
+            "match": "type"
+          }
+        }
+      },
+      "response": {
+        "status": 404,
+        "headers": {
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

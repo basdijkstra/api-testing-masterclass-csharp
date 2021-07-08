@@ -7,9 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APITestingWithRestSharp", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIMockingWithWireMock", "APIMockingWithWireMock\APIMockingWithWireMock.csproj", "{B264960C-2EB8-427D-904E-40884F846F4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContractTestingConsumer", "ContractTestingConsumer\ContractTestingConsumer.csproj", "{45DBEEA4-B055-412A-B23E-F784B2CE9F91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContractTestingConsumer", "ContractTestingConsumer\ContractTestingConsumer.csproj", "{45DBEEA4-B055-412A-B23E-F784B2CE9F91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContractTestingConsumer.Tests", "ContractTestingConsumer.Tests\ContractTestingConsumer.Tests.csproj", "{CA49D34E-A500-4461-96C3-5D6415E02C65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContractTestingConsumer.Tests", "ContractTestingConsumer.Tests\ContractTestingConsumer.Tests.csproj", "{CA49D34E-A500-4461-96C3-5D6415E02C65}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContractTestingProvider", "ContractTestingProvider\ContractTestingProvider.csproj", "{011EDA07-B40D-43F3-B57D-B723A6C25AF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContractTestingProvider.Tests", "ContractTestingProvider.Tests\ContractTestingProvider.Tests.csproj", "{EAADE5DF-85B5-497A-80D0-50DB37C89037}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{CA49D34E-A500-4461-96C3-5D6415E02C65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA49D34E-A500-4461-96C3-5D6415E02C65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA49D34E-A500-4461-96C3-5D6415E02C65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{011EDA07-B40D-43F3-B57D-B723A6C25AF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{011EDA07-B40D-43F3-B57D-B723A6C25AF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{011EDA07-B40D-43F3-B57D-B723A6C25AF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{011EDA07-B40D-43F3-B57D-B723A6C25AF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAADE5DF-85B5-497A-80D0-50DB37C89037}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAADE5DF-85B5-497A-80D0-50DB37C89037}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAADE5DF-85B5-497A-80D0-50DB37C89037}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAADE5DF-85B5-497A-80D0-50DB37C89037}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
