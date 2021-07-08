@@ -8,15 +8,15 @@ using System.Text;
 
 namespace ContractTestingConsumer.Tests
 {
-    public class ConsumerEventApiPact : IDisposable
+    public class ConsumerZipApiPact : IDisposable
     {
         public IPactBuilder PactBuilder { get; }
         public IMockProviderService MockProviderService { get; }
 
-        public int MockServerPort => 9222;
+        public int MockServerPort => 9876;
         public string MockProviderServiceBaseUri => $"http://localhost:{MockServerPort}";
 
-        public ConsumerEventApiPact()
+        public ConsumerZipApiPact()
         {
             PactBuilder = new PactBuilder(new PactConfig
             {
@@ -24,8 +24,8 @@ namespace ContractTestingConsumer.Tests
                 LogDir = $"..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}logs{Path.DirectorySeparatorChar}",
                 PactDir = $"..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}pacts{Path.DirectorySeparatorChar}"
             })
-                .ServiceConsumer("Event API Consumer")
-                .HasPactWith("Event API");
+                .ServiceConsumer("Zip API Consumer")
+                .HasPactWith("Zip API Provider");
 
             MockProviderService = PactBuilder.MockService(MockServerPort, false, IPAddress.Any);
         }
