@@ -38,10 +38,12 @@ namespace APITestingWithRestSharp.Examples
         [Test]
         public void SerializePocoToRequest_AssertOnStatusCode()
         {
-            Todo todo = new Todo();
-            todo.UserId = 1;
-            todo.Title = "Take out the trash";
-            todo.Completed = false;
+            Todo todo = new Todo
+            {
+                UserId = 1,
+                Title = "Take out the trash",
+                Completed = false
+            };
 
             RestRequest request = (RestRequest)new RestRequest("/todos", Method.POST)
                 .AddJsonBody(todo);
