@@ -18,10 +18,6 @@ namespace ContractTestingProvider.Tests
 {
     public class ZipApiProviderTests
     {
-        private readonly TestServer server;
-
-        private readonly HttpClient client;
-
         private readonly ITestOutputHelper _output;
 
         private string _providerUri { get; }
@@ -43,14 +39,7 @@ namespace ContractTestingProvider.Tests
         }
 
         [Fact]
-        public async Task DoSomeTest()
-        {
-            var response = await client.GetAsync("/zip/us/90210");
-            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
-        }
-
-        [Fact]
-        public void EnsureEventApiHonoursPactWithConsumer()
+        public void VerifyZipApiHonoursExpectationsInConsumerContract()
         {
             var config = new PactVerifierConfig
             {
