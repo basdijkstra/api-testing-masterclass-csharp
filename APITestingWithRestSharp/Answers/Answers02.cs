@@ -52,7 +52,7 @@ namespace APITestingWithRestSharp.Answers
          * and a private method that supplies the test data.
 	     **********************************************/
 
-        [Test, TestCaseSource("ZipCodeTestData")]
+        [Test, TestCaseSource(nameof(ZipCodeTestData))]
         public void GetDataForZipCode_CheckStateForFirstPlace_UsingTestCaseSource(string countryCode, string zipCode, string expectedState)
         {
             RestRequest request = (RestRequest)new RestRequest("/{countryCode}/{zipCode}", Method.GET)

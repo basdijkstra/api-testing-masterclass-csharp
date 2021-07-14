@@ -104,7 +104,7 @@ namespace APITestingWithRestSharp.Examples
             Assert.That(responseData.GetValue("name").ToString(), Is.EqualTo(expectedName));
         }
 
-        [Test, TestCaseSource("UserTestData")]
+        [Test, TestCaseSource(nameof(UserTestData))]
         public void DataDrivenTestUsingTestCaseSource(int userId, string expectedName)
         {
             RestRequest request = (RestRequest)new RestRequest("/users/{userid}", Method.GET)
