@@ -76,9 +76,7 @@ namespace APITestingWithRestSharp.Answers
             IRestResponse response = client.Execute(request);
 
             string cacheStatusHeaderValue = response.Headers
-                .Where(x => x.Name.Equals("CF-Cache-Status"))
-                .Select(x => x.Value.ToString())
-                .FirstOrDefault();
+                .FirstOrDefault(x => x.Name.Equals("CF-Cache-Status")).Value.ToString();
 
             Assert.That(cacheStatusHeaderValue, Is.EqualTo("DYNAMIC"));
         }

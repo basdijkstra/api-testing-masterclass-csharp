@@ -57,9 +57,7 @@ namespace APITestingWithRestSharp.Examples
             IRestResponse response = client.Execute(request);
 
             string serverHeaderValue = response.Headers
-                .Where(x => x.Name.Equals("Server"))
-                .Select(x => x.Value.ToString())
-                .FirstOrDefault();
+                .FirstOrDefault(x => x.Name == "Server").Value.ToString();
 
             Assert.That(serverHeaderValue, Is.EqualTo("cloudflare"));
         }
