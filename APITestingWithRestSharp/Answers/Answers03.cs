@@ -103,9 +103,9 @@ namespace APITestingWithRestSharp.Answers
 
             Location location = new JsonDeserializer().Deserialize<Location>(response);
 
-            var placesStartingWithKlein = location.Places.Where(x => x.PlaceName.StartsWith("Klein"));
+            int numberOfPlacesStartingWithKlein = location.Places.Count(x => x.PlaceName.StartsWith("Klein"));
 
-            Assert.That(placesStartingWithKlein.Count, Is.EqualTo(2));
+            Assert.That(numberOfPlacesStartingWithKlein, Is.EqualTo(2));
         }
     }
 }
