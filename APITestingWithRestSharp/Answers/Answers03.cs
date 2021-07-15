@@ -22,7 +22,7 @@ namespace APITestingWithRestSharp.Answers
         /******************************************************
          * Send a GET request to /us/90210
          * Deserialize the response into an instance of the
-         * Location POJO and use that instance to assert that
+         * Location POCO and use that instance to assert that
          * the CountryAbbreviation is equal to 'US'.
 	     ******************************************************/
 
@@ -43,7 +43,7 @@ namespace APITestingWithRestSharp.Answers
         /******************************************************
          * Send a GET request to /us/12345
          * Deserialize the response into an instance of the
-         * Location POJO and use that instance to assert that
+         * Location POCO and use that instance to assert that
          * the place name for the first place in the list is
          * equal to 'Schenectady'.
 	     ******************************************************/
@@ -65,7 +65,7 @@ namespace APITestingWithRestSharp.Answers
         /******************************************************
          * Send a GET request to /de/24848
          * Deserialize the response into an instance of the
-         * Location POJO and use that instance to assert that
+         * Location POCO and use that instance to assert that
          * the list of place names has a length equal to 4.
 	     ******************************************************/
 
@@ -87,7 +87,7 @@ namespace APITestingWithRestSharp.Answers
          * EXTRA
          * Send a GET request to /de/24848
          * Deserialize the response into an instance of the
-         * Location POJO and use that instance and a Linq query
+         * Location POCO and use that instance and a Linq query
          * to assert that the list of place names contains 2
          * places with a name starting with 'Klein'
 	     ******************************************************/
